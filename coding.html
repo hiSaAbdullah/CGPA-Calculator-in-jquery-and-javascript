@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CGPA Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body" style="margin: 10px;">
+                <div align='center' style='padding:10px;'>
+                    <h4>CGPA Calculator</h4>
+                </div>
+                <div class="row" id="result">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="estGpa">Estimated GPA:</label>
+                            <input type="text" class="form-control" placeholder="Enter Your Credit"
+                                id="">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="estCgpa">Estimated CGPA:</label>
+                            <input type="text" class="form-control" placeholder="Enter Your Credit"
+                                id="creditCompleted">
+                        </div>
+                    </div>
+                     
+                </div>
+                <div id="previousSemester" class="row">
+                    <div class="col-sm-12">
+                        <h5>Previous Semester Information</h5>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="creditCompleted">Credit Completed:</label>
+                            <input type="text" class="form-control" placeholder="Enter Your Credit"
+                                id="creditCompleted">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label for="currentCgpa">Current CGPA:</label>
+                            <input type="text" class="form-control" placeholder="Enter Your current CGPA"
+                                id="currentCgpa">
+                        </div>
+                    </div>
+                </div>
+                <div id="currentSemesterCourse" class="row">
+                    <div class="col-sm-12 ">
+                        <h5>Current Semester Information</h5>
+                    </div>
+
+                </div>
+                <div class="row" id="courseSelector">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label class="currentSemesterCourse">Course taken in current Semester:</label>
+                            <select class="form-control" id="currentSemCourse">
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" id="course1">
+                    <div class="col-sm-12">
+                        <h5>Course 1</h5>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="creditCompleted">Credit:</label>
+                            <input type="text" class="form-control" id="creditCompleted1">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="currentCgpa">CGPA:</label>
+                            <input type="text" class="form-control" id="currentCgpa1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="course2">
+                    <div class="col-sm-12">
+                        <h5>Course 2</h5>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="creditCompleted">Credit:</label>
+                            <input type="text" class="form-control" id="creditCompleted2">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="currentCgpa">CGPA:</label>
+                            <input type="text" class="form-control" id="currentCgpa2">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="course3">
+                    <div class="col-sm-12">
+                        <h5>Course 3</h5>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="creditCompleted">Credit:</label>
+                            <input type="text" class="form-control" id="creditCompleted3">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="currentCgpa">CGPA:</label>
+                            <input type="text" class="form-control" id="currentCgpa3">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="course4">
+                    <div class="col-sm-12">
+                        <h5>Course 4</h5>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="creditCompleted">Credit:</label>
+                            <input type="text" class="form-control" id="creditCompleted4">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="currentCgpa">CGPA:</label>
+                            <input type="text" class="form-control" id="currentCgpa4">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="course5">
+                    <div class="col-sm-12">
+                        <h5>Course 5</h5>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="creditCompleted">Credit:</label>
+                            <input type="text" class="form-control" id="creditCompleted5">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="currentCgpa">CGPA:</label>
+                            <input type="text" class="form-control" id="currentCgpa5">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="course6">
+                    <div class="col-sm-12">
+                        <h5>Course 6</h5>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="creditCompleted">Credit:</label>
+                            <input type="text" class="form-control" id="creditCompleted6">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="currentCgpa">CGPA:</label>
+                            <input type="text" class="form-control" id="currentCgpa6">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="course7">
+                    <div class="col-sm-12">
+                        <h5>Course 7</h5>
+                        <hr>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="creditCompleted">Credit:</label>
+                            <input type="text" class="form-control" id="creditCompleted7">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <label class="currentCgpa">CGPA:</label>
+                            <input type="text" class="form-control" id="currentCgpa7">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="mainBtn">
+                    <div class="col-sm-12">
+                        <div align="center">
+                            <button type="button" id="nextBtn" class="btn btn-outline-success btn-block">Next</button>
+                            <button type="button" id="calculateBtn" class="btn btn-outline-danger btn-block">Calculate
+                                CGPA</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+        let counter = 0;
+
+        $(document).ready(function () {
+            $("#currentSemesterCourse").hide();
+            $("#courseSelector").hide();
+            $("#course1").hide();
+            $("#course2").hide();
+            $("#course3").hide();
+            $("#course4").hide();
+            $("#course5").hide();
+            $("#course6").hide();
+            $("#course7").hide();
+            $("#calculateBtn").hide();
+        });
+        $("#nextBtn").click(function () {
+            counter++;
+            if (counter == 1) {
+                $("#previousSemester").hide();
+                $("#currentSemester").show();
+                $("#courseSelector").show();
+            }
+            else if (counter == 2) {
+                $("#courseSelector").hide();
+                $("#calculateBtn").show();
+                $("#nextBtn").hide();
+                if ($("#currentSemCourse").val() == 2) {
+                    $("#course1").show();
+                    $("#course2").show();
+                    $("#course3").hide();
+                    $("#course4").hide();
+                    $("#course5").hide();
+                    $("#course6").hide();
+                    $("#course7").hide();
+                } else if ($("#currentSemCourse").val() == 3) {
+                    $("#course1").show();
+                    $("#course2").show();
+                    $("#course3").show();
+                    $("#course4").hide();
+                    $("#course5").hide();
+                    $("#course6").hide();
+                    $("#course7").hide();
+                } else if ($("#currentSemCourse").val() == 4) {
+                    $("#course1").show();
+                    $("#course2").show();
+                    $("#course3").show();
+                    $("#course4").show();
+                    $("#course5").hide();
+                    $("#course6").hide();
+                    $("#course7").hide();
+                }
+                else if ($("#currentSemCourse").val() == 5) {
+                    $("#course1").show;
+                    $("#course2").show();
+                    $("#course3").show();
+                    $("#course4").show();
+                    $("#course5").show();
+                    $("#course6").hide();
+                    $("#course7").hide();
+                } else if ($("#currentSemCourse").val() == 6) {
+                    $("#course1").show();
+                    $("#course2").show();
+                    $("#course3").show();
+                    $("#course4").show();
+                    $("#course5").show();
+                    $("#course6").show();
+                    $("#course7").hide();
+                } else if ($("#currentSemCourse").val() == 7) {
+                    $("#course1").show();
+                    $("#course2").show();
+                    $("#course3").show();
+                    $("#course4").show();
+                    $("#course5").show();
+                    $("#course6").show();
+                    $("#course7").show();
+                }
+
+            }
+        });
+        $("#calculateBtn").click(function () {
+            let creditCompleted = $("#creditCompleted").val();
+            let currentCgpa = $("#currentCgpa").val();
+
+            if ($("#currentSemCourse").val() == 2) {
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var c2Credit = $("#currentSemCourse").val();
+                var c2Cgpa = $("#course2").val();
+
+                var currentSum = (c1Credit * c1Cgpa) + (c1Credit * c1Cgpa);
+
+                var currentCredit = c1Credit + c2Credit;
+
+                var totalSum = currentSum + (currentCgpa * creditCompleted);
+
+               var totalCredit = creditCompleted + c1Credit + c2Credit;
+
+                var estGpa = currentSum / currentCredit;
+
+                var estCgpa = totalSum / totalCredit;
+            }
+            else if ($("#currentSemCourse").val() == 3) {
+                var c1Credit = $("#currentSemCourse").val()
+                var c1Cgpa = $("#course2").val();
+
+                var c2Credit = $("#currentSemCourse").val();
+                var c2Cgpa = $("#course2").val();
+
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+                var currentSum = (c1Credit * c1Cgpa) + (c1Credit * c1Cgpa);
+
+                var currentCredit = c1Credit + c2Credit;
+
+              var  totalSum = currentSum + (currentCgpa * creditCompleted);
+
+               var totalCredit = creditCompleted + c1Credit + c2Credit;
+
+                var estGpa = currentSum / currentCredit;
+
+                var estCgpa = totalSum / totalCredit;
+
+            }
+            else if ($("#currentSemCourse").val() == 4) {
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var c2Credit = $("#currentSemCourse").val();
+                var c2Cgpa = $("#course2").val();
+
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var c2Credit = $("#currentSemCourse").val();
+                var c2Cgpa = $("#course2").val();
+
+                var currentSum = (c1Credit * c1Cgpa) + (c1Credit * c1Cgpa);
+
+                var currentCredit = c1Credit + c2Credit;
+
+               var totalSum = currentSum + (currentCgpa * creditCompleted);
+
+               var totalCredit = creditCompleted + c1Credit + c2Credit;
+
+                var estGpa = currentSum / currentCredit;
+
+                var estCgpa = totalSum / totalCredit;
+            }
+            else if ($("#currentSemCourse").val() == 5) {
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var c2Credit = $("#currentSemCourse").val();
+                var c2Cgpa = $("#course2").val();
+
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var c2Credit = $("#currentSemCourse").val();
+                var c2Cgpa = $("#course2").val();
+
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var currentSum = (c1Credit * c1Cgpa) + (c1Credit * c1Cgpa);
+
+                var currentCredit = c1Credit + c2Credit;
+
+               var totalSum = currentSum + (currentCgpa * creditCompleted);
+
+              var  totalCredit = creditCompleted + c1Credit + c2Credit;
+
+                var estGpa = currentSum / currentCredit;
+
+                var estCgpa = totalSum / totalCredit;
+            }
+            else if ($("#currentSemCourse").val() == 6) {
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var c2Credit = $("#currentSemCourse").val();
+                var c2Cgpa = $("#course2").val();
+
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var c2Credit = $("#currentSemCourse").val();
+                var c2Cgpa = $("#course2").val();
+
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var c2Credit = $("#currentSemCourse").val();
+                var c2Cgpa = $("#course2").val();
+
+                var currentSum = (c1Credit * c1Cgpa) + (c1Credit * c1Cgpa);
+
+                var currentCredit = c1Credit + c2Credit;
+
+               var totalSum = currentSum + (currentCgpa * creditCompleted);
+
+               var totalCredit = creditCompleted + c1Credit + c2Credit;
+
+                var estGpa = currentSum / currentCredit;
+
+                var estCgpa = totalSum / totalCredit;
+            }
+            else if ($("#currentSemCourse").val() == 7) {
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var c2Credit = $("#currentSemCourse").val();
+                var c2Cgpa = $("#course2").val();
+
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var c2Credit = $("#currentSemCourse").val();
+                var c2Cgpa = $("#course2").val();
+
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var c2Credit = $("#currentSemCourse").val();
+                var c2Cgpa = $("#course2").val();
+
+                var c1Credit = $("#currentSemCourse").val();
+                var c1Cgpa = $("#course2").val();
+
+                var currentSum = (c1Credit * c1Cgpa) + (c1Credit * c1Cgpa);
+
+                var currentCredit = c1Credit + c2Credit;
+
+               var totalSum = currentSum + (currentCgpa * creditCompleted);
+
+               var totalCredit = creditCompleted + c1Credit + c2Credit;
+
+                var estGpa = currentSum / currentCredit;
+
+                var estCgpa = totalSum / totalCredit;
+
+            }
+
+        })
+// document.getElementById("nextBtn").addEventListener("click",function(){
+//     console.log("next button cliked");
+// })
+
+    </script>
+</body>
+
+</html>
