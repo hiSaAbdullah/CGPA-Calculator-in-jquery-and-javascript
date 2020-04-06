@@ -26,14 +26,14 @@
                         <div class="form-group">
                             <label for="estGpa">Estimated GPA:</label>
                             <input type="text" class="form-control" placeholder="Enter Your Credit"
-                                id="">
+                                id="estGpa">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="estCgpa">Estimated CGPA:</label>
                             <input type="text" class="form-control" placeholder="Enter Your Credit"
-                                id="creditCompleted">
+                                id="estCgpa">
                         </div>
                     </div>
                      
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="currentSemesterCourse" class="row">
+                <div id="currentSemester" class="row">
                     <div class="col-sm-12 ">
                         <h5>Current Semester Information</h5>
                     </div>
@@ -310,19 +310,27 @@
             }
         });
         $("#calculateBtn").click(function () {
-            let creditCompleted = $("#creditCompleted").val();
-            let currentCgpa = $("#currentCgpa").val();
+            var creditCompleted = $("#creditCompleted").val();
+            var currentCgpa = $("#currentCgpa").val();
+
+            creditCompleted=parseFloat(creditCompleted);
+            currentCgpa =parseFloat(currentCgpa);
 
             if ($("#currentSemCourse").val() == 2) {
                 var c1Credit = $("#creditCompleted1").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa1").val();
 
                 var c2Credit = $("#creditCompleted2").val();
-                var c2Cgpa = $("#course2").val();
+                var c2gpa = $("#currentCgpa2").val();
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1gpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1gpa);
 
 
-
-                var currentSum = (c1Credit * c1Cgpa) + (c1Credit * c1Cgpa);
+                var currentSum = (c1Credit * c1gpa) + (c2Credit * c2gpa);
 
                 var currentCredit = c1Credit + c2Credit;
 
@@ -336,16 +344,26 @@
             }
             else if ($("#currentSemCourse").val() == 3) {
                 var c1Credit = $("#creditCompleted1").val()
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa1").val();
 
                 var c2Credit = $("#creditCompleted2").val();
-                var c2Cgpa = $("#course2").val();
+                var c2gpa = $("#currentCgpa2").val();
 
                 var c1Credit = $("#creditCompleted3").val();
-                var c1Cgpa = $("#course2").val();
-                var currentSum = (c1Credit * c1Cgpa) + (c1Credit * c1Cgpa);
+                var c1gpa = $("#currentCgpa3").val();
 
-                var currentCredit = c1Credit + c2Credit;
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                var currentSum = (c1Credit * c1gpa) + (c2Credit * c2gpa)+(c3Credit * c3gpa);
+
+                var currentCredit = c1Credit + c2Credit+c3Credit;
 
               var  totalSum = currentSum + (currentCgpa * creditCompleted);
 
@@ -358,20 +376,32 @@
             }
             else if ($("#currentSemCourse").val() == 4) {
                 var c1Credit = $("#creditCompleted1").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa1").val();
 
                 var c2Credit = $("#creditCompleted2").val();
-                var c2Cgpa = $("#course2").val();
+                var c2gpa = $("#currentCgpa2").val();
 
                 var c1Credit = $("#creditCompleted3").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa3").val();
 
                 var c2Credit = $("#creditCompleted4").val();
-                var c2Cgpa = $("#course2").val();
+                var c2gpa = $("#currentCgpa4").val();
 
-                var currentSum = (c1Credit * c1Cgpa) + (c1Credit * c1Cgpa);
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
 
-                var currentCredit = c1Credit + c2Credit;
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                var currentSum = (c1Credit * c1gpa) + (c2Credit * c2gpa)+(c3Credit * c3gpa)+(c4Credit * c4gpa);
+
+                var currentCredit = c1Credit + c2Credit+c3Credit+c4Credit;
 
                var totalSum = currentSum + (currentCgpa * creditCompleted);
 
@@ -383,23 +413,38 @@
             }
             else if ($("#currentSemCourse").val() == 5) {
                 var c1Credit = $("#creditCompleted1").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa1").val();
 
                 var c2Credit = $("#creditCompleted2").val();
-                var c2Cgpa = $("#course2").val();
+                var c2gpa = $("#currentCgpa2").val();
 
                 var c1Credit = $("#creditCompleted3").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa3").val();
 
                 var c2Credit = $("#creditCompleted4").val();
-                var c2Cgpa = $("#course2").val();
+                var c2gpa = $("#currentCgpa4").val();
 
                 var c1Credit = $("#creditCompleted5").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa5").val();
 
-                var currentSum = (c1Credit * c1Cgpa) + (c1Credit * c1Cgpa);
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
 
-                var currentCredit = c1Credit + c2Credit;
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                var currentSum = (c1Credit * c1gpa) + (c2Credit * c2gpa)+(c3Credit * c3gpa)+(c4Credit * c4gpa)+(c5Credit * c5gpa);
+
+                var currentCredit = c1Credit + c2Credit+c3Credit+c4Credit+c5Credit;
 
                var totalSum = currentSum + (currentCgpa * creditCompleted);
 
@@ -411,26 +456,44 @@
             }
             else if ($("#currentSemCourse").val() == 6) {
                 var c1Credit = $("#creditCompleted1").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa1").val();
 
                 var c2Credit = $("#creditCompleted2").val();
-                var c2Cgpa = $("#course2").val();
+                var c2gpa = $("#currentCgpa2").val();
 
                 var c1Credit = $("#creditCompleted3").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa3").val();
 
                 var c2Credit = $("#creditCompleted4").val();
-                var c2Cgpa = $("#course2").val();
+                var c2gpa = $("#currentCgpa4").val();
 
                 var c1Credit = $("#creditCompleted5").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa5").val();
 
                 var c2Credit = $("#creditCompleted6").val();
-                var c2Cgpa = $("#course2").val();
+                var c2gpa = $("#currentCgpa6").val();
 
-                var currentSum = (c1Credit * c1Cgpa) + (c1Credit * c1Cgpa);
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
 
-                var currentCredit = c1Credit + c2Credit;
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                var currentSum = (c1Credit * c1gpa) + (c2Credit * c2gpa)+(c3Credit * c3gpa)+(c4Credit * c4gpa)+(c5Credit * c5gpa)+(c6Credit * c6gpa);
+
+                var currentCredit = c1Credit +c2Credit+c3Credit+c4Credit+c5Credit+c6Credit;
 
                var totalSum = currentSum + (currentCgpa * creditCompleted);
 
@@ -442,29 +505,50 @@
             }
             else if ($("#currentSemCourse").val() == 7) {
                 var c1Credit = $("#creditCompleted1").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa1").val();
 
                 var c2Credit = $("#creditCompleted2").val();
-                var c2Cgpa = $("#course2").val();
+                var c2gpa = $("#currentCgpa2").val();
 
                 var c1Credit = $("#creditCompleted3").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa3").val();
 
                 var c2Credit = $("creditCompleted4").val();
-                var c2Cgpa = $("#course2").val();
+                var c2gpa = $("#currentCgpa4").val();
 
                 var c1Credit = $("#creditCompleted5").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa5").val();
 
                 var c2Credit = $("#creditCompleted6").val();
-                var c2Cgpa = $("#course2").val();
+                var c2gpa = $("#currentCgpa6").val();
 
                 var c1Credit = $("#creditCompleted7").val();
-                var c1Cgpa = $("#course2").val();
+                var c1gpa = $("#currentCgpa7").val();
 
-                var currentSum = (c1Credit * c1Cgpa) + (c1Credit * c1Cgpa);
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
 
-                var currentCredit = c1Credit + c2Credit;
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                c1Credit=parseFloat(c1Credit);
+                c2Gpa=parseFloat(c1Cgpa);
+
+                var currentSum = (c1Credit * c1gpa) + (c2Credit * c2gpa)+(c3Credit * c3gpa)+(c4Credit * c4gpa)+(c5Credit * c5gpa)+(c6Credit * c6gpa)+(c7Credit * c7gpa);
+
+                var currentCredit = c1Credit + c2Credit+c3Credit+c4Credit+c5Credit+c6Credit+c7Credit;
 
                var totalSum = currentSum + (currentCgpa * creditCompleted);
 
@@ -475,9 +559,9 @@
                  estCgpa = totalSum / totalCredit;
 
             }
-            $('#estGpa').val(estGpa);
-            $('#estCgpa').val(estCgpa);
-            $('#result').show();
+            $("#estGpa").val(estGpa);
+            $("#estCgpa").val(estCgpa);
+            $("#result").show();
         })
 // document.getElementById("nextBtn").addEventListener("click",function(){
 //     console.log("next button cliked");
